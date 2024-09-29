@@ -2,26 +2,138 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+:root{
+  --maincolor: rgb(124, 36, 117);
+--bgcolor:violet;
+--textcolor:rgb(241, 230, 230);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bgcolor);
+
+  
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+header {
+  background-color: var(--maincolor);
+  color:var(--textcolor);
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+h1{
+  font-size: 30px;
+  color: var(--textcolor);
+}
+.logo {
+  
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+  
+  
+}
+#nam{
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--textcolor);
+  
+}
+
+/* header div ul {
+  
+} */
+
+header .list ul li {
+ display: inline;
+  margin: 0 5px;
+  color: var(--textcolor);
+  padding: 10px;
+  cursor: pointer;
+}
+
+header .list ul li:hover {
+  background-color: var(--bgcolor);
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+footer{
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  font-size: 14px;
+  background-color: var(--maincolor);
+  text-align: center;
+  color: var(--textcolor);
+}
+.parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 100vh;
+  background-color: var(--bgcolor);
+}
+
+
+.myname{
+  text-align: left;
+  font-size: 50px;
+  margin-bottom: 200px;
+  padding-top: 0;
+  padding-left: 50px;
+  width: 100%;
+  height: auto;
+  color: var(--textcolor);
+  
+}
+.myname span{
+  font-weight:900;
+  color: var(--maincolor);
+}
+.mypic {
+  width: 80%;
+  height: auto;
+
+  
+}
+.mypic Image{
+ background-color:wheat;
+ 
+}
+
+
+
+
+
+@media only screen and (max-width:500px) {
+  .myname {
+    font-size: 30px;
+    margin-bottom: 0px;
+  }
+  .myname span{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+  .parent{
+    flex-wrap: wrap;
   }
 }

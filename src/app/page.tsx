@@ -1,5 +1,4 @@
-import Header from "./components/header";
-import Footer from "./components/footer";
+
 import Image from "next/image";
 import pic1 from "../pictures/pic1.png"
 

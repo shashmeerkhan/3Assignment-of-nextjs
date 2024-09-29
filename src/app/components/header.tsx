@@ -16,7 +16,7 @@ export default function Header() {
         <Link href={"/about-us"}><li>About-us</li></Link>
        <Link href={"/contact-us"}> <li>Contact-us</li></Link>
         <Link href={"/cousres"}> <li>Courses</li></Link>
-        <Link href={"/cousres"}> <li>Responsive</li></Link>
+        
       </ul>
     
      </div></header>

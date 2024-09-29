@@ -11,12 +11,12 @@ export default function Home() {
         <h1>Hi, <br />I am <span>Shahmeer Khan</span></h1>
       </div>
       <div className="mypic">
-        {/* Use Next.js Image component */}
+        
         <Image
-          src={pic1} // Path to the image in the public folder
+          src={pic1} 
           alt="Shahmeer Khan"
-          width={600} // Set the desired width
-          height={400} // Set the desired height
+          width={600} 
+          height={400} 
         />
       </div>
       </div>

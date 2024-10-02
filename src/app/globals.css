@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root{
-  --maincolor: rgb(124, 36, 117);
---bgcolor:violet;
---textcolor:rgb(241, 230, 230);
+  --maincolor: #2a27ce;
+--bgcolor:rgb(175, 189, 236);
+--textcolor:#fcf6f6;
 
 }
 * {
@@ -26,6 +26,7 @@ header {
   background-color: var(--maincolor);
   color:var(--textcolor);
   padding: 5px 0;
+ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +34,8 @@ header {
 }
 h1{
   font-size: 30px;
-  color: var(--textcolor);
+  color: var(--maincolor);
+  text-align: center;
 }
 .logo {
   
@@ -41,40 +43,35 @@ h1{
   font-weight: bold;
   margin-left: 20px;
   
-  
 }
-#nam{
-  font-size: 25px;
-  font-weight: 700;
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+  background-color: var(--maincolor);
   color: var(--textcolor);
-  
 }
-
-/* header div ul {
-  
-} */
-
-header .list ul li {
- display: inline;
-  margin: 0 5px;
-  color: var(--textcolor);
-  padding: 10px;
+.menu-icon{
+  display: none;
   cursor: pointer;
+  font-size: 24px;
+  color: var(--textcolor);
+}
+.menuLinks{
+
+  color: var(--textcolor);
+  margin-right: 50px;
+  font-size: 30px;
+  flex-direction: row;
+
+}
+.menuLinks:hover{
+  color: var(--bgcolor);
+  transition: color 0.3s ease;
+  font-size: 32px;
 }
 
-header .list ul li:hover {
-  background-color: var(--bgcolor);
-  transition: background-color 0.3s;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transform: translateY(-4px);
-}
-
-header::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 footer{
   position: fixed;
   bottom: 0; left: 0; right: 0;
@@ -87,7 +84,7 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  flex-direction: row;
   height: 100vh;
   background-color: var(--bgcolor);
 }
@@ -114,16 +111,12 @@ footer{
 
   
 }
-.mypic Image{
- background-color:wheat;
- 
-}
 
 
 
 
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:700px) {
   .myname {
     font-size: 30px;
     margin-bottom: 0px;
@@ -136,4 +129,27 @@ footer{
   .parent{
     flex-wrap: wrap;
   }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.menu-icon {
+    display: block;
+}
 }

@@ -1,6 +1,6 @@
 export default function Contact() {
     return (
-      <div>
+      <div className="mycontact">
         <h1>Contact Us</h1>
         <p>
           We'd love to hear from you! Whether you have a question, want to
@@ -10,7 +10,7 @@ export default function Contact() {
   
         <h2>Get in Touch</h2>
         <p>
-          Email: <a href="mailto:kshahmeer10@gmail.com">info@yourwebsite.com</a>
+          Email: <a href="mailto:kshahmeer10@gmail.com">kshahmeer10@gmail.com</a>
           <br />
           Phone: +923481341392
         </p>
